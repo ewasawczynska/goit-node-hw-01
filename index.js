@@ -28,7 +28,7 @@ async function invokeAction({ action, id, name, email, phone }) {
     case "get":
         try {
             const contact = await getContactById(id);
-            console.log(`\ncontact ID: ${id}`.blue);
+            console.log(`\nContact ID: ${id}`.blue);
             console.table(contact);
           } catch (error) {
             console.error(error);
@@ -48,7 +48,7 @@ async function invokeAction({ action, id, name, email, phone }) {
     case "remove":
         try {
             await removeContact(id);
-            console.log(`\ncontact has been deleted`.red);
+            console.log(`\nContact has been deleted`.red);
           } catch (error) {
             console.error(error);
           }
